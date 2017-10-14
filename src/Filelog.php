@@ -30,7 +30,7 @@ class Filelog implements LoggerInterface
     public function log($level, $message, array $context = array())
     {
         error_log(sprintf(
-            "%s %s %s %s%s",
+            "%s %s %s %s%s\n",
             date($this->_timeformat),
             $level,
             $this->_ident,
