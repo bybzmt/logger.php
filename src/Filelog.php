@@ -15,7 +15,7 @@ class Filelog implements LoggerInterface
     protected $_file;
     protected $_timeformat;
 
-    public function __construct($ident, $file, $timeformat='Y-m-dTH:i:s')
+    public function __construct($ident, $file, $timeformat='Y-m-d\TH:i:s')
     {
         $this->_ident = $ident;
         $this->_file = $file;
