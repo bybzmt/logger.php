@@ -22,6 +22,8 @@ class BasicTest extends PHPUnit_Framework_TestCase
         $log = new \Bybzmt\Logger\Filelog('filelog', $this->tmpfile);
 
         $log->info($this->content);
+
+        $this->assertInstanceOf('Psr\Log\LoggerInterface', $log);
     }
 
     public function testSyslog()
@@ -29,5 +31,7 @@ class BasicTest extends PHPUnit_Framework_TestCase
         $log = new \Bybzmt\Logger\Syslog('syslog', 'LOG_LOCAL0');
 
         $log->info($this->content);
+
+        $this->assertInstanceOf('Psr\Log\LoggerInterface', $log);
     }
 }

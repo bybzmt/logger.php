@@ -2,11 +2,12 @@
 namespace Bybzmt\Logger;
 
 use Psr\Log\LoggerTrait;
+use Psr\Log\LoggerInterface;
 
 /**
  * syslog日志
  */
-class Syslog
+class Syslog implements LoggerInterface
 {
     use LoggerTrait;
 
