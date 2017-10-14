@@ -31,7 +31,7 @@ class Filelog implements LoggerInterface
     {
         error_log(sprintf(
             "%s %s %s %s%s",
-            $this->_timeformat,
+            date($this->_timeformat),
             $level,
             $this->_ident,
             json_encode($message, JSON_UNESCAPED_UNICODE),
