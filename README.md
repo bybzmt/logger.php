@@ -11,6 +11,10 @@ a simple php psr-3 logger
 
 兼容psr-3方便切换不同的库。
 
+安装
+-----------
+`composer require bybzmt/logger`
+
 
 Licence
 -------------------
