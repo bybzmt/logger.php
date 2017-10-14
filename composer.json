@@ -1,0 +1,24 @@
+{
+    "name": "bybzmt/logger",
+    "description": "a simple php psr-3 logger",
+    "keywords": ["logger", "psr-3", "log", "syslog"],
+    "homepage": "http://github.com/bybzmt/logger.php",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "bybzmt",
+            "email": "other@bybzmt.me",
+            "homepage": "http://github.com/bybzmt"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "psr/log": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bybzmt\\Logger\\": "src/"
+        }
+    }
+}
