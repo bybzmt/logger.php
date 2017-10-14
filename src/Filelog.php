@@ -20,6 +20,11 @@ class Filelog implements LoggerInterface
         $this->_ident = $ident;
         $this->_file = $file;
         $this->_timeformat = $timeformat;
+
+        $dir = dirname($file);
+        if (!file_exists($dir)) {
+            mkdir($dir, 0777, true);
+        }
     }
 
     public function log($level, $message, array $context = array())
