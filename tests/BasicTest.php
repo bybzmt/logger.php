@@ -34,4 +34,13 @@ class BasicTest extends PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf('Psr\Log\LoggerInterface', $log);
     }
+
+    public function testPHPlog()
+    {
+        $log = new \Bybzmt\Logger\PHPlog('PHPlog');
+
+        $log->info($this->content);
+
+        $this->assertInstanceOf('Psr\Log\LoggerInterface', $log);
+    }
 }
