@@ -25,7 +25,7 @@ class PHPlog implements LoggerInterface
             $level,
             $this->_ident,
             json_encode($message, JSON_UNESCAPED_UNICODE),
-            $context ? json_encode($context, JSON_UNESCAPED_UNICODE) : ""
+            $context ? " ".json_encode($context, JSON_UNESCAPED_UNICODE) : ""
         ));
     }
 }
