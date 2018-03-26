@@ -20,6 +20,7 @@ class Factory
         case 'PHPlog':
             return new PHPlog(...$cfgs);
         case 'null':
+        case null:
             //直接抛弃
             return new NullLogger();
         default:
