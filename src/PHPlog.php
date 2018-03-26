@@ -21,7 +21,8 @@ class PHPlog implements LoggerInterface
     public function log($level, $message, array $context = array())
     {
         error_log(sprintf(
-            "%s %s %s%s\n",
+            "%s %s %s %s%s\n",
+            date('Y-m-d\TH:i:s'),
             $level,
             $this->_ident,
             json_encode($message, JSON_UNESCAPED_UNICODE),
