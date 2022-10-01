@@ -1,18 +1,18 @@
 <?php
 
-class BasicTest extends PHPUnit_Framework_TestCase
+class BasicTest extends \PHPUnit\Framework\TestCase
 {
     protected $content;
     protected $tmpfile;
 
-    protected function setUp()
+    protected function setUp() :void
     {
         $this->content = 'this time is: ' . date('Y-m-d H:i:s');
 
         $this->tmpfile = tempnam(sys_get_temp_dir(), 'test_');
     }
 
-    protected function tearDown()
+    protected function tearDown() :void
     {
         @unlink($this->tmpfile);
     }

@@ -27,7 +27,7 @@ class Filelog implements LoggerInterface
         }
     }
 
-    public function log($level, $message, array $context = array())
+    public function log($level, \Stringable|string $message, array $context = array()) :void
     {
         error_log(sprintf(
             "%s %s %s %s%s\n",

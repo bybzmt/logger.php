@@ -66,7 +66,7 @@ class Syslog implements LoggerInterface
         closelog();
     }
 
-    public function log($level, $message, array $context = array())
+    public function log($level, \Stringable|string $message, array $context = array()) :void
     {
         $priority = $this->_prioritys[$level];
 
